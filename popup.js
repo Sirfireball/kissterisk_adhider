@@ -1,5 +1,6 @@
 // popup.js
 var select = document.getElementById("num-hidden");
+var close_button = document.getElementById("close-button");
 
 // Let background.js know popup.js has started and needs current num_hidden value.
 chrome.runtime.sendMessage({from: "popup", subject: "init"}, function(response) {
@@ -21,4 +22,9 @@ chrome.runtime.sendMessage({from: "popup", subject: "init"}, function(response) 
 select.addEventListener('change', function() {
 	var num_hidden_str = this.value.toString();
 	chrome.runtime.sendMessage({from: "popup", subject: "update", num_hidden: num_hidden_str});
+}, false);
+
+// Close popup if close button is clicked.
+close_button.addEventListener('click', function() {
+	window.close();
 }, false);

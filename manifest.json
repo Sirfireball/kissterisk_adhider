@@ -27,7 +27,9 @@
 	"permissions": [
 		"webNavigation",
 		"activeTab",
-		"*://*/*"
+ 		"*://kisscartoon.me/Cartoon/*/*",
+ 		"*://kissanime.com/Anime/*/*",
+ 		"*://kissasian.com/Drama/*/*"
  	],
 	"content_scripts": [
 		{

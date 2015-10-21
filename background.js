@@ -1,5 +1,8 @@
 // background.js
 
+// Comment this out to have log info.
+console.log = function(){};
+
 // Store default num_hidden in localStorage if it's not there already.
 if (localStorage.getItem('kissterisk_adhider_num_hidden') === null) {
 	localStorage.setItem('kissterisk_adhider_num_hidden', '5');

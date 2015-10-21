@@ -1,4 +1,8 @@
 // The content_script for Kiss* AdHider
+
+// Comment this out to have log info.
+console.log = function(){};
+
 (function kissterisk_adhider() {
 
 	chrome.runtime.sendMessage({from: "kissterisk_adhider"}, function(response) {

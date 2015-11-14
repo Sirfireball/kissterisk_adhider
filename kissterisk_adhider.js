@@ -8,7 +8,9 @@ console.log = function(){};
 	chrome.runtime.sendMessage({from: "kissterisk_adhider"}, function(response) {
 		var num_hidden = parseInt(response.num_hidden);
 		console.log("clickhiding "+num_hidden+" ads");
-		clickhide(num_hidden);
+		window.onload = window.setTimeout(function() {
+			clickhide(num_hidden);
+		}, 5000);
 	});
 
 	// Loops through all a tags on the page and of the ones

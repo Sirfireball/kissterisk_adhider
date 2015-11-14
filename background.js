@@ -27,8 +27,8 @@ chrome.webNavigation.onDOMContentLoaded.addListener(function(e) {
 			queryContains: 'id='
 		},
 		{
-			// E.g. http://kissanime.com/Anime/Psycho-Pass/Episode-019?id=23611
-			hostEquals: 'kissanime.com',
+			// E.g. http://kissanime.to/Anime/Psycho-Pass/Episode-019?id=23611
+			hostEquals: 'kissanime.to',
 			pathContains: 'Anime',
 			queryContains: 'id='
 		},

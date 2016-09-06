@@ -9,31 +9,32 @@ if (localStorage.getItem('kissterisk_adhider_num_hidden') === null) {
 }
 
 // See if user navigates to a url we care about.
-chrome.webNavigation.onDOMContentLoaded.addListener(function(e) {
-	// Show the page_action
-	chrome.pageAction.show(e.tabId);
-},
-{ url: [
-		{
-			// E.g. http://kisscartoon.me/Cartoon/Rick-and-Morty/Episode-011-Ricksy-Business?id=16132
-			hostEquals: 'kisscartoon.me',
-			pathContains: 'Cartoon',
-			queryContains: 'id='
-		},
-		{
-			// E.g. http://kissasian.com/Drama/The-Merchant-Gaekju-2015/Episode-4?id=17267
-			hostEquals: 'kissasian.com',
-			pathContains: 'Drama',
-			queryContains: 'id='
-		},
-		{
-			// E.g. http://kissanime.to/Anime/Psycho-Pass/Episode-019?id=23611
-			hostEquals: 'kissanime.to',
-			pathContains: 'Anime',
-			queryContains: 'id='
-		},
-	]
-});
+chrome.webNavigation.onDOMContentLoaded.addListener(
+	function(e) {
+		// Show the page_action
+		chrome.pageAction.show(e.tabId);
+	},
+	{
+		url: [
+			{
+				// E.g. http://kisscartoon.me/Cartoon/Rick-and-Morty/Episode-011-Ricksy-Business?id=16132
+				hostEquals: 'kisscartoon.me',
+				pathContains: 'Cartoon',
+				queryContains: 'id='
+			},
+			{
+				// E.g. http://kissasian.com/Drama/The-Merchant-Gaekju-2015/Episode-4?id=17267
+				hostEquals: 'kissasian.com',
+				pathContains: 'Drama',
+				queryContains: 'id='
+			},
+			{
+				// E.g. http://kissanime.to/Anime/Psycho-Pass/Episode-019?id=23611
+				hostEquals: 'kissanime.to',
+			},
+		]
+	}
+);
 
 // Await messages
 chrome.runtime.onMessage.addListener(

@@ -41,6 +41,14 @@
 			"js": [
 				"kissterisk_adhider.js"
 			]
+		},
+		{
+			"matches": [
+				"*://kissanime.to/*"
+			],
+			"js": [
+				"popunderRemover.js"
+			]
 		}
 	]
 }

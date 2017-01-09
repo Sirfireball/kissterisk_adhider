@@ -16,7 +16,7 @@ chrome.webNavigation.onDOMContentLoaded.addListener(function(e) {
 { url: [
 		{
 			// E.g. http://kisscartoon.me/Cartoon/Rick-and-Morty/Episode-011-Ricksy-Business?id=16132
-			hostEquals: 'kisscartoon.me',
+			hostEquals: 'kisscartoon.se',
 			pathContains: 'Cartoon',
 			queryContains: 'id='
 		},
